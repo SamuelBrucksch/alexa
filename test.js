@@ -29,7 +29,7 @@ exports.handler = (event, context) => {
 
         switch(event.request.intent.name) {
           case "GetSubscriberCount":
-            var endpoint = "" // ENDPOINT GOES HERE
+            var endpoint = "https://jsonplaceholder.typicode.com/posts" // ENDPOINT GOES HERE
             var body = ""
             https.get(endpoint, (response) => {
               response.on('data', (chunk) => { body += chunk })
